@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Advisor</title>
+</head>
+<body>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f5f5;
+        margin: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 15px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: #4caf50;
+        margin-top: 20px;
+    }
+
+    p {
+        color: #555;
+    }
+</style>
+
+    <h1>stock analysis</h1>
+    <form method="post">
+        <label for="current_high_price">Enter high price:</label>
+        <input type="number" name="current_high_price" required>
+        <br>
+        <label for="current_low_price">Enter low price:</label>
+        <input type="number" name="current_low_price" required>
+        <br>
+         <label for="current_close_price">Enter current price:</label>
+        <input type="number" name="current_close_price" required>
+        <br>
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p>For the current stock : {{ result }}</p>
+
+
+</body>
+</html>
